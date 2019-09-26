@@ -1,19 +1,37 @@
 {
   "name": "svrx-plugin-hello-world",
   "version": "0.0.1",
-  "description": "hello-world plugin for server-x",
+  "description": "The svrx plugin for hello-world",
   "main": "index.js",
-  "scripts": {},
-  "engines": {
-    "svrx": "0.x"
-  },
   "keywords": [
     "svrx",
     "svrx-plugin",
     "hello-world"
   ],
-  "author": "x-orpheus",
-  "license": "MIT",
-  "devDependencies": {},
-  "dependencies": {}
+  "engines": {
+    "svrx": ">=0.0.1"
+  },
+  "author": "svrxjs",
+  "scripts": {
+    "start": "node ./example/start.js",
+    "lint": "eslint \"**/*.js\"",
+    "lint:fix": "eslint \"**/*.js\" --fix"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@svrx/eslint-config": "^1.0.0",
+    "eslint": "^6.2.0",
+    "global-modules": "^2.0.0",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  },
+  "license": "MIT"
 }
