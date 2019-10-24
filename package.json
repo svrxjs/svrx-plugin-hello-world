@@ -12,8 +12,22 @@
     "svrx-plugin",
     "hello-world"
   ],
-  "author": "x-orpheus",
-  "license": "MIT",
-  "devDependencies": {},
-  "dependencies": {}
+  "author": "svrxjs",
+  "dependencies": {},
+  "devDependencies": {
+    "@svrx/eslint-config": "^1.0.0",
+    "eslint": "^6.2.0",
+    "global-modules": "^2.0.0",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  },
+  "license": "MIT"
 }
