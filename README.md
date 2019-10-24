@@ -23,4 +23,4 @@ svrx({ plugins: [ 'hello-world' ] }).start();
 
 ## Options
 
-- auto: `boolean`,auto jump to the markdown you are editing. default is `svrx`
+- user: `user`, example param

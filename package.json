@@ -1,11 +1,11 @@
 {
   "name": "svrx-plugin-hello-world",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "hello-world plugin for server-x",
   "main": "index.js",
   "scripts": {},
   "engines": {
-    "svrx": "0.x"
+    "svrx": "^1.0.0"
   },
   "keywords": [
     "svrx",
